@@ -1,0 +1,11 @@
+identifier: recommendation-engine
+title: Recommendation Engine
+blueprint: service
+properties:
+  description: "ML-powered suggestions - 'You might also like...' based on order history and preferences. Early development."
+  tier: experimental
+  lifecycle: development
+  slack_channel: https://slack.com/app_redirect?channel=data
+  documentation_url: https://docs.matars-iced-americano.io/recommendation-engine
+  latest_version: v0.3.0-alpha
+team: data-team

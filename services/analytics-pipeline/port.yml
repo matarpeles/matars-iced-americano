@@ -1,0 +1,11 @@
+identifier: analytics-pipeline
+title: Analytics Pipeline
+blueprint: service
+properties:
+  description: "Data processing for business intelligence - sales trends, demand forecasting, and customer insights."
+  tier: standard
+  lifecycle: production
+  slack_channel: https://slack.com/app_redirect?channel=data
+  documentation_url: https://docs.matars-iced-americano.io/analytics-pipeline
+  latest_version: v1.5.0
+team: data-team

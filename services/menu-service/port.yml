@@ -1,0 +1,11 @@
+identifier: menu-service
+title: Menu Service
+blueprint: service
+properties:
+  description: "Manages the complete menu catalog - drinks, food, pricing, and seasonal specials. The source of truth for what we serve."
+  tier: critical
+  lifecycle: production
+  slack_channel: https://slack.com/app_redirect?channel=product
+  documentation_url: https://docs.matars-iced-americano.io/menu-service
+  latest_version: v4.1.0
+team: product-team

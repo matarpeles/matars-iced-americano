@@ -1,0 +1,56 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: order-api
+  namespace: production
+  labels:
+    app: order-api
+    team: orders-team
+    tier: critical
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: order-api
+  template:
+    metadata:
+      labels:
+        app: order-api
+    spec:
+      containers:
+      - name: order-api
+        image: matars-iced-americano/order-api:v3.2.1
+        ports:
+        - containerPort: 8080
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          initialDelaySeconds: 10
+          periodSeconds: 5
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          initialDelaySeconds: 5
+          periodSeconds: 3
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: order-api
+  namespace: production
+spec:
+  selector:
+    app: order-api
+  ports:
+  - port: 80
+    targetPort: 8080
+  type: ClusterIP

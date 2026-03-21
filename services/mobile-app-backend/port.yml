@@ -1,0 +1,11 @@
+identifier: mobile-app-backend
+title: Mobile App Backend
+blueprint: service
+properties:
+  description: "API backend for iOS and Android apps. Currently in beta testing with select customers."
+  tier: experimental
+  lifecycle: development
+  slack_channel: https://slack.com/app_redirect?channel=customers
+  documentation_url: https://docs.matars-iced-americano.io/mobile-app-backend
+  latest_version: v0.9.0-beta
+team: customers-team

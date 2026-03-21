@@ -1,0 +1,11 @@
+identifier: loyalty-service
+title: Loyalty Service
+blueprint: service
+properties:
+  description: "Customer loyalty program - points, rewards, and memberships. Because regulars deserve the best."
+  tier: standard
+  lifecycle: production
+  slack_channel: https://slack.com/app_redirect?channel=customers
+  documentation_url: https://docs.matars-iced-americano.io/loyalty-service
+  latest_version: v3.0.2
+team: customers-team

@@ -1,0 +1,11 @@
+identifier: notifications-service
+title: Notifications Service
+blueprint: service
+properties:
+  description: "Customer communications - order updates, promotions, and alerts via SMS, email, and push notifications."
+  tier: standard
+  lifecycle: production
+  slack_channel: https://slack.com/app_redirect?channel=customers
+  documentation_url: https://docs.matars-iced-americano.io/notifications-service
+  latest_version: v2.1.0
+team: customers-team

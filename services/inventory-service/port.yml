@@ -1,0 +1,11 @@
+identifier: inventory-service
+title: Inventory Service
+blueprint: service
+properties:
+  description: "Tracks all supplies - coffee beans, milk, cups, and more. Ensures we never run out of what makes the perfect iced americano."
+  tier: standard
+  lifecycle: production
+  slack_channel: https://slack.com/app_redirect?channel=product
+  documentation_url: https://docs.matars-iced-americano.io/inventory-service
+  latest_version: v2.3.0
+team: product-team

@@ -1,0 +1,11 @@
+identifier: payment-gateway
+title: Payment Gateway
+blueprint: service
+properties:
+  description: "Secure payment processing service. Handles credit cards, mobile payments, and gift cards. PCI-DSS compliant."
+  tier: critical
+  lifecycle: production
+  slack_channel: https://slack.com/app_redirect?channel=orders
+  documentation_url: https://docs.matars-iced-americano.io/payment-gateway
+  latest_version: v2.8.0
+team: orders-team

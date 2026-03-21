@@ -1,0 +1,155 @@
+name: Scaffold New Service
+
+on:
+  workflow_dispatch:
+    inputs:
+      service_name:
+        description: 'Service name (lowercase, hyphens)'
+        required: true
+        type: string
+      language:
+        description: 'Programming language'
+        required: true
+        type: choice
+        options:
+          - python
+          - go
+          - nodejs
+          - typescript
+      team:
+        description: 'Owning team'
+        required: true
+        type: choice
+        options:
+          - orders-team
+          - product-team
+          - customers-team
+          - data-team
+          - operations-team
+      tier:
+        description: 'Service tier'
+        required: true
+        type: choice
+        options:
+          - critical
+          - standard
+          - experimental
+      description:
+        description: 'Service description'
+        required: true
+        type: string
+
+jobs:
+  scaffold:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Create service directory
+        run: |
+          mkdir -p services/${{ inputs.service_name }}/src
+
+      - name: Create port.yml
+        run: |
+          cat > services/${{ inputs.service_name }}/port.yml << 'EOF'
+          identifier: ${{ inputs.service_name }}
+          title: ${{ inputs.service_name }}
+          blueprint: service
+          properties:
+            description: "${{ inputs.description }}"
+            tier: ${{ inputs.tier }}
+            lifecycle: development
+            slack_channel: https://slack.com/app_redirect?channel=${{ inputs.team }}
+            documentation_url: https://docs.matars-iced-americano.io/${{ inputs.service_name }}
+            latest_version: v0.1.0
+          team: ${{ inputs.team }}
+          EOF
+
+      - name: Create README
+        run: |
+          cat > services/${{ inputs.service_name }}/README.md << 'EOF'
+          # ${{ inputs.service_name }}
+
+          ${{ inputs.description }}
+
+          ## Tech Stack
+
+          - **Language:** ${{ inputs.language }}
+
+          ## Team
+
+          Owned by **${{ inputs.team }}**
+          EOF
+
+      - name: Create Python template
+        if: inputs.language == 'python'
+        run: |
+          cat > services/${{ inputs.service_name }}/src/main.py << 'EOF'
+          from fastapi import FastAPI
+
+          app = FastAPI(title="${{ inputs.service_name }}", version="0.1.0")
+
+          @app.get("/health")
+          async def health():
+              return {"status": "healthy", "service": "${{ inputs.service_name }}"}
+          EOF
+
+      - name: Create Go template
+        if: inputs.language == 'go'
+        run: |
+          cat > services/${{ inputs.service_name }}/src/main.go << 'EOF'
+          package main
+
+          import (
+              "net/http"
+              "github.com/gin-gonic/gin"
+          )
+
+          func main() {
+              r := gin.Default()
+              r.GET("/health", func(c *gin.Context) {
+                  c.JSON(http.StatusOK, gin.H{"status": "healthy", "service": "${{ inputs.service_name }}"})
+              })
+              r.Run(":8080")
+          }
+          EOF
+
+      - name: Create Node.js template
+        if: inputs.language == 'nodejs' || inputs.language == 'typescript'
+        run: |
+          cat > services/${{ inputs.service_name }}/src/index.js << 'EOF'
+          const express = require('express');
+          const app = express();
+
+          app.get('/health', (req, res) => {
+              res.json({ status: 'healthy', service: '${{ inputs.service_name }}' });
+          });
+
+          app.listen(8080, () => console.log('Service running on port 8080'));
+          EOF
+
+      - name: Commit and push
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add .
+          git commit -m "feat: scaffold ${{ inputs.service_name }} service"
+          git push
+
+      - name: Report to Port
+        uses: port-labs/port-github-action@v1
+        with:
+          clientId: ${{ secrets.PORT_CLIENT_ID }}
+          clientSecret: ${{ secrets.PORT_CLIENT_SECRET }}
+          operation: UPSERT
+          identifier: ${{ inputs.service_name }}
+          blueprint: service
+          properties: |
+            {
+              "description": "${{ inputs.description }}",
+              "tier": "${{ inputs.tier }}",
+              "lifecycle": "development",
+              "latest_version": "v0.1.0"
+            }
+          team: ${{ inputs.team }}

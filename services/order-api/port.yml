@@ -1,0 +1,11 @@
+identifier: order-api
+title: Order API
+blueprint: service
+properties:
+  description: "Core service handling customer orders, cart management, and checkout flow. The heartbeat of every iced americano served."
+  tier: critical
+  lifecycle: production
+  slack_channel: https://slack.com/app_redirect?channel=orders
+  documentation_url: https://docs.matars-iced-americano.io/order-api
+  latest_version: v3.2.1
+team: orders-team

@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: payment-gateway
+  namespace: production
+  labels:
+    app: payment-gateway
+    team: orders-team
+    tier: critical
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: payment-gateway
+  template:
+    metadata:
+      labels:
+        app: payment-gateway
+    spec:
+      containers:
+      - name: payment-gateway
+        image: matars-iced-americano/payment-gateway:v2.8.0
+        ports:
+        - containerPort: 8080
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: payment-gateway
+  namespace: production
+spec:
+  selector:
+    app: payment-gateway
+  ports:
+  - port: 80
+    targetPort: 8080
+  type: ClusterIP

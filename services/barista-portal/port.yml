@@ -1,0 +1,11 @@
+identifier: barista-portal
+title: Barista Portal
+blueprint: service
+properties:
+  description: "Staff-facing web app for order management, queue display, and store operations. The barista's command center."
+  tier: standard
+  lifecycle: production
+  slack_channel: https://slack.com/app_redirect?channel=operations
+  documentation_url: https://docs.matars-iced-americano.io/barista-portal
+  latest_version: v2.0.0
+team: operations-team
