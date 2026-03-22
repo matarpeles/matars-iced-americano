@@ -6,3 +6,18 @@ properties:
   description: Payment gateway integration patterns and PCI compliance
   scope: Team
   category: Backend
+  instructions: |
+    # Payment Service Integration
+    
+    Integrate with payment gateways securely.
+    
+    ## Security Requirements
+    - Never log card numbers
+    - Use tokenization for stored cards
+    - Implement 3D Secure where required
+    
+    ## Integration Pattern
+    1. Create payment intent
+    2. Collect payment details (client-side)
+    3. Confirm payment
+    4. Handle webhooks for async updates

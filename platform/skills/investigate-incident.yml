@@ -6,3 +6,19 @@ properties:
   description: Incident investigation workflows and root cause analysis
   scope: Company
   category: Agentic
+  instructions: |
+    # Investigate Incident
+    
+    Systematic approach to incident investigation.
+    
+    ## Investigation Steps
+    1. Gather timeline of events
+    2. Identify affected services
+    3. Correlate logs and metrics
+    4. Identify root cause
+    5. Document findings
+    
+    ## Tools to Use
+    - Datadog for metrics and logs
+    - PagerDuty for incident timeline
+    - GitHub for recent deployments

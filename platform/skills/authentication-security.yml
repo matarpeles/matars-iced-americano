@@ -6,3 +6,17 @@ properties:
   description: Auth flows, OAuth, JWT best practices and security guidelines
   scope: Company
   category: Security
+  instructions: |
+    # Authentication & Security
+    
+    Implement secure authentication flows.
+    
+    ## JWT Best Practices
+    - Short expiration times (15 min)
+    - Use refresh tokens for session extension
+    - Store tokens securely (httpOnly cookies)
+    
+    ## OAuth Flows
+    - Use PKCE for public clients
+    - Validate redirect URIs strictly
+    - Implement proper scope management

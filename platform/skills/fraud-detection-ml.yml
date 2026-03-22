@@ -6,3 +6,18 @@ properties:
   description: ML-based fraud detection patterns and model deployment
   scope: Team
   category: Data
+  instructions: |
+    # Fraud Detection ML
+    
+    Deploy and monitor fraud detection models.
+    
+    ## Model Features
+    - Transaction velocity
+    - Geographic anomalies
+    - Device fingerprinting
+    - Behavioral patterns
+    
+    ## Deployment
+    - Use feature store for real-time features
+    - A/B test new models before full rollout
+    - Monitor precision/recall metrics daily

@@ -6,3 +6,19 @@ properties:
   description: Order event processing, async patterns, and message queues
   scope: Repo
   category: Backend
+  instructions: |
+    # Order Event Handling
+    
+    Process order events asynchronously.
+    
+    ## Event Types
+    - OrderCreated
+    - OrderPaid
+    - OrderFulfilled
+    - OrderCancelled
+    
+    ## Processing Pattern
+    - Use idempotency keys
+    - Implement dead letter queues
+    - Retry with exponential backoff
+    - Log all state transitions

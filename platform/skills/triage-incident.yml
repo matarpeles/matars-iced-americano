@@ -6,3 +6,18 @@ properties:
   description: Incident triage, severity classification, and escalation procedures
   scope: Company
   category: Process
+  instructions: |
+    # Triage Incident
+    
+    Classify and route incidents appropriately.
+    
+    ## Severity Levels
+    - **P1**: Customer-facing outage
+    - **P2**: Degraded service
+    - **P3**: Internal tooling issue
+    - **P4**: Minor bug, no impact
+    
+    ## Escalation Path
+    1. On-call engineer (immediate)
+    2. Team lead (15 min no response)
+    3. Engineering manager (P1 only)

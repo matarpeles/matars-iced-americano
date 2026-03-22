@@ -6,3 +6,17 @@ properties:
   description: React component patterns, hooks, and state management guidelines
   scope: Team
   category: Frontend
+  instructions: |
+    # Frontend React Patterns
+    
+    Standard patterns for building React components.
+    
+    ## Component Structure
+    - Use functional components with hooks
+    - Implement proper error boundaries
+    - Follow atomic design principles
+    
+    ## State Management
+    - Local state for UI-only concerns
+    - Context for shared component state
+    - Redux for complex global state

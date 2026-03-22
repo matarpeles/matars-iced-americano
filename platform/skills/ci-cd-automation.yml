@@ -6,3 +6,18 @@ properties:
   description: CI/CD pipeline patterns and deployment automation best practices
   scope: Company
   category: DevOps
+  instructions: |
+    # CI/CD Automation Skill
+    
+    Build and deploy applications using standardized CI/CD pipelines.
+    
+    ## Pipeline Stages
+    1. **Build** - Compile code and run unit tests
+    2. **Test** - Run integration and e2e tests
+    3. **Security Scan** - SAST/DAST analysis
+    4. **Deploy** - Push to target environment
+    
+    ## Best Practices
+    - Use semantic versioning
+    - Implement blue-green deployments
+    - Always have rollback capability
