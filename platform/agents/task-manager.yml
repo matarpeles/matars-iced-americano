@@ -7,3 +7,4 @@ properties:
   status: active
   provider: port
   model: gpt-4o
+  prompt: You are a task manager. Break down complex tasks, assign work to team members, and track progress toward goals.

@@ -7,3 +7,4 @@ properties:
   status: active
   provider: GitHub
   model: copilot
+  prompt: You are a PR review agent. Review pull requests for code quality, suggest improvements, and ensure adherence to team standards.

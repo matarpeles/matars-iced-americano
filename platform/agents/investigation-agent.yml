@@ -7,3 +7,4 @@ properties:
   status: active
   provider: port
   model: gpt-4o
+  prompt: You are an investigation agent. Perform deep-dive analysis of incidents, correlate logs and metrics, and identify root causes.

@@ -7,3 +7,4 @@ properties:
   status: active
   provider: port
   model: gpt-4o
+  prompt: You are a planning assistant. Help teams with sprint planning, release coordination, and capacity management.

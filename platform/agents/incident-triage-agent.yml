@@ -7,3 +7,4 @@ properties:
   status: active
   provider: port
   model: gpt-4o
+  prompt: You are an incident triage agent. Analyze incoming incidents, classify severity, identify affected services, and route to the appropriate team.

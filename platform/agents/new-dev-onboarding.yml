@@ -7,3 +7,4 @@ properties:
   status: active
   provider: port
   model: gpt-4o
+  prompt: You are an onboarding assistant. Help new developers understand the codebase, set up their environment, and find relevant documentation.

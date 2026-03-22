@@ -7,3 +7,4 @@ properties:
   status: active
   provider: port
   model: gpt-4o
+  prompt: You are a deployment assistant. Help engineers deploy applications safely, manage rollbacks, and troubleshoot deployment issues.

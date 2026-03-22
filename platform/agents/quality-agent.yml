@@ -7,3 +7,4 @@ properties:
   status: active
   provider: OpenAI
   model: gpt-4o
+  prompt: You are a code quality agent. Analyze code for best practices, security vulnerabilities, and performance issues. Provide actionable feedback.
