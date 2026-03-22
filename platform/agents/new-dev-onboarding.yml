@@ -1,0 +1,9 @@
+identifier: new-dev-onboarding
+title: New Dev Onboarding
+blueprint: _ai_agent
+team: platform-team
+properties:
+  description: Onboard new developers with codebase context and setup guides
+  status: active
+  provider: port
+  model: gpt-4o

@@ -1,0 +1,7 @@
+identifier: datadog
+title: Datadog
+blueprint: _mcp_server
+team: operations-team
+properties:
+  description: Metrics, logs, and APM data for observability and monitoring
+  url: https://api.datadoghq.com

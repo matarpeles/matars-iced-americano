@@ -1,0 +1,9 @@
+identifier: deploy-assistant
+title: Deploy Assistant
+blueprint: _ai_agent
+team: platform-team
+properties:
+  description: Assists with deployment workflows and rollback procedures
+  status: active
+  provider: port
+  model: gpt-4o

@@ -1,0 +1,7 @@
+identifier: notion
+title: Notion
+blueprint: _mcp_server
+team: product-team
+properties:
+  description: Product and technical documentation search
+  url: https://api.notion.com

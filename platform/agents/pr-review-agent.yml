@@ -1,0 +1,9 @@
+identifier: pr-review-agent
+title: PR Review Agent
+blueprint: _ai_agent
+team: platform-team
+properties:
+  description: Automated PR review with code suggestions and feedback
+  status: active
+  provider: GitHub
+  model: copilot

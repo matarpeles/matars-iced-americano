@@ -1,0 +1,9 @@
+identifier: investigation-agent
+title: Investigation Agent
+blueprint: _ai_agent
+team: operations-team
+properties:
+  description: Deep-dive incident investigation with log analysis
+  status: active
+  provider: port
+  model: gpt-4o

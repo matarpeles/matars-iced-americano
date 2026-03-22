@@ -1,0 +1,9 @@
+identifier: incident-triage-agent
+title: Incident Triage Agent
+blueprint: _ai_agent
+team: operations-team
+properties:
+  description: Auto-triage incoming incidents and assign severity
+  status: active
+  provider: port
+  model: gpt-4o

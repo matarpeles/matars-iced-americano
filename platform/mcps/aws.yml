@@ -1,0 +1,7 @@
+identifier: aws
+title: AWS
+blueprint: _mcp_server
+team: platform-team
+properties:
+  description: Cloud infrastructure troubleshooting and resource management
+  url: https://aws.amazon.com

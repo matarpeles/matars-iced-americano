@@ -1,0 +1,7 @@
+identifier: pagerduty
+title: PagerDuty
+blueprint: _mcp_server
+team: operations-team
+properties:
+  description: Incident management, on-call schedules, and escalation policies
+  url: https://api.pagerduty.com

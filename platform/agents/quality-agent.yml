@@ -1,0 +1,9 @@
+identifier: quality-agent
+title: Quality Agent
+blueprint: _ai_agent
+team: platform-team
+properties:
+  description: Code quality analysis and review automation
+  status: active
+  provider: OpenAI
+  model: gpt-4o

@@ -1,0 +1,8 @@
+identifier: payment-service-integration
+title: Payment Service Integration
+blueprint: skill
+team: orders-team
+properties:
+  description: Payment gateway integration patterns and PCI compliance
+  scope: Team
+  category: Backend

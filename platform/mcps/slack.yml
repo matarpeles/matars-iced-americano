@@ -1,0 +1,7 @@
+identifier: slack
+title: Slack
+blueprint: _mcp_server
+team: platform-team
+properties:
+  description: Team communication, notifications, and incident channels
+  url: https://api.slack.com

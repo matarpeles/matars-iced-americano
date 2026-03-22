@@ -1,0 +1,8 @@
+identifier: investigate-incident
+title: Investigate Incident
+blueprint: skill
+team: operations-team
+properties:
+  description: Incident investigation workflows and root cause analysis
+  scope: Company
+  category: Agentic

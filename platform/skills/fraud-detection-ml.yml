@@ -1,0 +1,8 @@
+identifier: fraud-detection-ml
+title: Fraud Detection ML
+blueprint: skill
+team: data-team
+properties:
+  description: ML-based fraud detection patterns and model deployment
+  scope: Team
+  category: Data

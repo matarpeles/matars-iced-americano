@@ -1,0 +1,8 @@
+identifier: order-event-handling
+title: Order Event Handling
+blueprint: skill
+team: orders-team
+properties:
+  description: Order event processing, async patterns, and message queues
+  scope: Repo
+  category: Backend

@@ -1,0 +1,8 @@
+identifier: frontend-react-patterns
+title: Frontend React Patterns
+blueprint: skill
+team: customers-team
+properties:
+  description: React component patterns, hooks, and state management guidelines
+  scope: Team
+  category: Frontend

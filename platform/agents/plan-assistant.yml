@@ -1,0 +1,9 @@
+identifier: plan-assistant
+title: Plan Assistant
+blueprint: _ai_agent
+team: platform-team
+properties:
+  description: Sprint planning and release coordination
+  status: active
+  provider: port
+  model: gpt-4o

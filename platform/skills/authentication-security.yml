@@ -1,0 +1,8 @@
+identifier: authentication-security
+title: Authentication & Security
+blueprint: skill
+team: platform-team
+properties:
+  description: Auth flows, OAuth, JWT best practices and security guidelines
+  scope: Company
+  category: Security

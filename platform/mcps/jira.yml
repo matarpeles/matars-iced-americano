@@ -1,0 +1,7 @@
+identifier: jira
+title: Jira
+blueprint: _mcp_server
+team: platform-team
+properties:
+  description: Issue tracking, sprint management, and project boards
+  url: https://api.atlassian.com

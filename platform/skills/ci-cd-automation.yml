@@ -1,0 +1,8 @@
+identifier: ci-cd-automation
+title: CI/CD Automation
+blueprint: skill
+team: platform-team
+properties:
+  description: CI/CD pipeline patterns and deployment automation best practices
+  scope: Company
+  category: DevOps

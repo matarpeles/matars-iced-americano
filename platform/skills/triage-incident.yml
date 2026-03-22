@@ -1,0 +1,8 @@
+identifier: triage-incident
+title: Triage Incident
+blueprint: skill
+team: operations-team
+properties:
+  description: Incident triage, severity classification, and escalation procedures
+  scope: Company
+  category: Process

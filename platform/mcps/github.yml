@@ -1,0 +1,7 @@
+identifier: github
+title: GitHub
+blueprint: _mcp_server
+team: platform-team
+properties:
+  description: Code context, PRs, deployments, and repository files
+  url: https://api.github.com

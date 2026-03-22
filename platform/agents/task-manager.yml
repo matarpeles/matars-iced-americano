@@ -1,0 +1,9 @@
+identifier: task-manager
+title: Task Manager
+blueprint: _ai_agent
+team: platform-team
+properties:
+  description: Task breakdown, assignment, and progress tracking
+  status: active
+  provider: port
+  model: gpt-4o
